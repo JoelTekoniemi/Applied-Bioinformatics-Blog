@@ -3,7 +3,6 @@ title: "How to make a quarto blog"
 author: "Joel Tekoniemi"
 date: "2025-10-06"
 categories: [tutorial]
-theme: "litera"
 lightbox: true
 ---
 

@@ -7,6 +7,27 @@
     "text": "This blog was created for the Applied Bioinformatics course, where I post everyday updates :))"
   },
   {
+    "objectID": "posts/Day1/index.html",
+    "href": "posts/Day1/index.html",
+    "title": "Day 1",
+    "section": "",
+    "text": "On Monday, we covered some topics relating to good data practice, git and quarto. At the end of the day, we set ourselves up with individual blogs for documenting course progress.\n\n\n\nIntroduction • Course content, schedule etc • People intros\nData management Data cycle FAIR principles Good data management practices • Research documentation • Data organisation • Information security • Ethics and legislation (Sweden: research data needs to be kept for 10 years)\n\nData sets: central dogma of biology &lt;-&gt; bioinformatics\nBest practices • Raw data in separate directory • Code in another directory • Output (figs) in separate directory • Version control • README in every directory • File naming that is easy to understand for humans and machines (no ö, spaces characters) • Use non-proprietary formats —&gt; .csv instead of .xlsx\n\nLiterate programming • Code chunks • Markdown Notebook in quarto\nVersion control Git and good git practices Clear and informative, commit often (multiple times per day - once per day) —&gt; Writing blog posts every day\nEnvironment managers Using pixi in this course\nContainers Includes everything necessary to run code and do the necessary analysis, including the OS.\nWorkflow manager —&gt; Nextflow\n\n\n\n\n• git branch • git checkout • git merge • git diff • git add • git commit -m “Message” Commit on a single theme, message should be in imperative • git push\nNotes on branching • git branch —&gt; creates a new branch based on the current commit\nMerging • specific branch or specific commit • conflicts need to be resolved\nAdd and commit • add —&gt; taking area • commit —&gt; send to repo\nPush, pull and collaborate • git push origin main\nExercise: alphabetise a list • Format first name, last name • Branching • Merge with neighbours via commit, pull, merge and push until 14 names are in alphabetical order."
+  },
+  {
+    "objectID": "posts/Day1/index.html#intro-to-course-by-amrei",
+    "href": "posts/Day1/index.html#intro-to-course-by-amrei",
+    "title": "Day 1",
+    "section": "",
+    "text": "Introduction • Course content, schedule etc • People intros\nData management Data cycle FAIR principles Good data management practices • Research documentation • Data organisation • Information security • Ethics and legislation (Sweden: research data needs to be kept for 10 years)\n\nData sets: central dogma of biology &lt;-&gt; bioinformatics\nBest practices • Raw data in separate directory • Code in another directory • Output (figs) in separate directory • Version control • README in every directory • File naming that is easy to understand for humans and machines (no ö, spaces characters) • Use non-proprietary formats —&gt; .csv instead of .xlsx\n\nLiterate programming • Code chunks • Markdown Notebook in quarto\nVersion control Git and good git practices Clear and informative, commit often (multiple times per day - once per day) —&gt; Writing blog posts every day\nEnvironment managers Using pixi in this course\nContainers Includes everything necessary to run code and do the necessary analysis, including the OS.\nWorkflow manager —&gt; Nextflow"
+  },
+  {
+    "objectID": "posts/Day1/index.html#git-and-github-by-samuel-flores",
+    "href": "posts/Day1/index.html#git-and-github-by-samuel-flores",
+    "title": "Day 1",
+    "section": "",
+    "text": "• git branch • git checkout • git merge • git diff • git add • git commit -m “Message” Commit on a single theme, message should be in imperative • git push\nNotes on branching • git branch —&gt; creates a new branch based on the current commit\nMerging • specific branch or specific commit • conflicts need to be resolved\nAdd and commit • add —&gt; taking area • commit —&gt; send to repo\nPush, pull and collaborate • git push origin main\nExercise: alphabetise a list • Format first name, last name • Branching • Merge with neighbours via commit, pull, merge and push until 14 names are in alphabetical order."
+  },
+  {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
     "title": "How to make a quarto blog",
@@ -18,6 +39,6 @@
     "href": "index.html",
     "title": "JT_Blog",
     "section": "",
-    "text": "How to make a quarto blog\n\n\n\ntutorial\n\n\n\n\n\n\n\n\n\nOct 6, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\nNo matching items"
+    "text": "How to make a quarto blog\n\n\n\ntutorial\n\n\n\n\n\n\n\n\n\nOct 6, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\ndiary\n\n\n\n\n\n\n\n\n\nOct 6, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\nNo matching items"
   }
 ]

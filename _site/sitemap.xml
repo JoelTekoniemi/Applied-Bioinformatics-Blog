@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://your-website-url.example.com/about.html</loc>
+    <loc>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/about.html</loc>
     <lastmod>2025-10-06T11:52:59.121Z</lastmod>
   </url>
   <url>
-    <loc>https://your-website-url.example.com/posts/welcome/index.html</loc>
-    <lastmod>2025-10-06T11:52:59.122Z</lastmod>
+    <loc>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day1/index.html</loc>
+    <lastmod>2025-10-06T12:45:42.469Z</lastmod>
   </url>
   <url>
-    <loc>https://your-website-url.example.com/index.html</loc>
+    <loc>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/welcome/index.html</loc>
+    <lastmod>2025-10-06T12:28:19.685Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/index.html</loc>
     <lastmod>2025-10-06T11:52:59.121Z</lastmod>
   </url>
 </urlset>
