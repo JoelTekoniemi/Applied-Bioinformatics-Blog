@@ -83,4 +83,4 @@ Exercise: alphabetise a list
 • Branching
 • Merge with neighbours via commit, pull, merge and push until 14 names are in alphabetical order.
 
-![](thumbnail.jpg)
+![](thumbnail.png)
