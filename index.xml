@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>JT_Blog</title>
-<link>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/</link>
-<atom:link href="https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://your-website-url.example.com/</link>
+<atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>Joels blog for Applied Bioinformatics</description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Sun, 05 Oct 2025 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 06 Oct 2025 00:00:00 GMT</lastBuildDate>
 <item>
   <title>How to make a quarto blog</title>
   <dc:creator>Joel Tekoniemi</dc:creator>
-  <link>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/welcome/</link>
+  <link>https://your-website-url.example.com/posts/welcome/</link>
   <description><![CDATA[ 
 
 
@@ -22,14 +22,14 @@
 
 
 <p>This is my first post in my Quarto blog. Welcome!</p>
-<p><img src="https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/welcome/thumbnail.jpg" class="img-fluid"> There is no content in this post.</p>
+<p><img src="https://your-website-url.example.com/posts/welcome/thumbnail.jpg" class="img-fluid"> There is no content in this post.</p>
 
 
 
  ]]></description>
   <category>tutorial</category>
-  <guid>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/welcome/</guid>
-  <pubDate>Sun, 05 Oct 2025 22:00:00 GMT</pubDate>
+  <guid>https://your-website-url.example.com/posts/welcome/</guid>
+  <pubDate>Mon, 06 Oct 2025 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
