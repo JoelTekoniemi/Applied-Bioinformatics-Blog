@@ -2,21 +2,17 @@ project:
   type: website
 
 website:
-  description: "A blog built with Quarto"
+  description: "Joels blog for Applied Bioinformatics"
   site-url: https://your-website-url.example.com # you must change this appropriately for RSS feeds to work properly
   title: "JT_Blog"
   navbar:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/JoelTekoniemi
 format:
   html:
     theme:
-      - cosmo
-      - brand
       - litera
     css: styles.css
 

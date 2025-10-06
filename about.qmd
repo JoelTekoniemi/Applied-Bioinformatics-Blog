@@ -4,16 +4,13 @@ image: profile.jpg
 about:
   template: jolla
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
+      href: https://linkedin.com/
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/JoelTekoniemi
 
 ---
 
-About this blog
+This blog was created for the Applied Bioinformatics course, where I post everyday updates :))
