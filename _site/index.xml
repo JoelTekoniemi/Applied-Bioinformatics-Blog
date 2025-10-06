@@ -8,7 +8,7 @@
 <title>JT_Blog</title>
 <link>https://your-website-url.example.com/</link>
 <atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
-<description>A blog built with Quarto</description>
+<description>Joels blog for Applied Bioinformatics</description>
 <generator>quarto-1.8.25</generator>
 <lastBuildDate>Sun, 05 Oct 2025 22:00:00 GMT</lastBuildDate>
 <item>
@@ -22,8 +22,7 @@
 
 
 <p>This is my first post in my Quarto blog. Welcome!</p>
-<p><a href="thumbnail.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://your-website-url.example.com/posts/welcome/thumbnail.jpg" class="img-fluid"></a></p>
-<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
+<p><img src="https://your-website-url.example.com/posts/welcome/thumbnail.jpg" class="img-fluid"> There is no content in this post.</p>
 
 
 

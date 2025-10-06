@@ -12,8 +12,6 @@ website:
         href: https://github.com/JoelTekoniemi
 format:
   html:
-    theme:
-      - litera
     css: styles.css
 
 
