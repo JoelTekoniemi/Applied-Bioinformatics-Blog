@@ -28,17 +28,17 @@
     "text": "• git branch • git checkout • git merge • git diff • git add • git commit -m “Message” Commit on a single theme, message should be in imperative • git push\nNotes on branching • git branch —&gt; creates a new branch based on the current commit\nMerging • specific branch or specific commit • conflicts need to be resolved\nAdd and commit • add —&gt; taking area • commit —&gt; send to repo\nPush, pull and collaborate • git push origin main\nExercise: alphabetise a list • Format first name, last name • Branching • Merge with neighbours via commit, pull, merge and push until 14 names are in alphabetical order."
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "JT_Blog",
+    "section": "",
+    "text": "Day 1\n\n\n\ndiary\n\n\n\n\n\n\n\n\n\nOct 6, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nHow to make a quarto blog\n\n\n\ntutorial\n\n\n\n\n\n\n\n\n\nOct 6, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
     "title": "How to make a quarto blog",
     "section": "",
     "text": "This is my first post in my Quarto blog. Welcome!\n There is no content in this post."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "JT_Blog",
-    "section": "",
-    "text": "How to make a quarto blog\n\n\n\ntutorial\n\n\n\n\n\n\n\n\n\nOct 6, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\ndiary\n\n\n\n\n\n\n\n\n\nOct 6, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\nNo matching items"
   }
 ]
