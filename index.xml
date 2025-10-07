@@ -10,7 +10,52 @@
 <atom:link href="https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Joels blog for Applied Bioinformatics</description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Mon, 06 Oct 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 07 Oct 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Day 2</title>
+  <dc:creator>Joel Tekoniemi</dc:creator>
+  <link>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day2/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="tuesday" class="level1">
+<h1>Tuesday</h1>
+<p>Today we set up some pixi environments and used slurm to submit batch jobs on the hpc2n cluster. Then, we explored the use of containers with apptainer. Everything done today was on the hpc2n remote cluster.</p>
+<section id="pixi" class="level2">
+<h2 class="anchored" data-anchor-id="pixi">Pixi</h2>
+<p>The pixi environments are installed into folders and called using <code>pixi run &lt;...&gt;</code>. It’s pretty simple and new packages can be added to the environment using <code>pixi add &lt;package name&gt;</code>. If an environment is not needed anymore, we can delete the folder inside which the environment was created.</p>
+</section>
+<section id="job-scheduling-using-slurm" class="level2">
+<h2 class="anchored" data-anchor-id="job-scheduling-using-slurm">Job scheduling using SLURM</h2>
+<p>On the cluster, we can submit jobs to be run with automatic allocation of resources so that we can focus on other things.</p>
+<p>Running pixi with slurm:</p>
+<p><code>srun -A &lt;PROJECT-ID&gt; -t 15:00 -n 1 pixi run fastqc  --noextract -o fastqc &lt;PATH&gt;/joel/RNAseq-data/*.fastq.gz</code></p>
+<p>In this case, we used an example data set of RNA-seq files and ran fastqc. The dataset is accessible at <a href="https://www.ebi.ac.uk/ena/browser/view/PRJNA369563">PRJNA369563</a></p>
+</section>
+<section id="containers" class="level2">
+<h2 class="anchored" data-anchor-id="containers">Containers</h2>
+<p>For this course, we used apptainer to run and build containers. Ready-made (rocommended) containers can be obtained from dockerhub or seqera, and in this case we used both. First, we pulled the vcftools container, after which we pulled fastqc in order to re-run qc on the sequencing reads above, but using a container and batch script. Running fastqc in a container: <code>apptainer exec ../containers/fastqc_0.12.1.sif fastqc -o ../fastqc-container --noextract ../*fastq.gz</code></p>
+<section id="building-a-container" class="level3">
+<h3 class="anchored" data-anchor-id="building-a-container">Building a container</h3>
+<p>Using a definition file, containers can be built relatively simply. When the container is run using the <code>run</code> command, the code under the <code>%runscript</code> block will be run automatically. This can be overruled with the <code>exec</code> comand.</p>
+<p>Examples:</p>
+<p><code>$ apptainer run containers/lolcow.sif</code></p>
+<p><code>$ apptainer exec containers/lolcow.sif "date|cowsay"</code></p>
+<p>This is the peak of the day’s accomplishments, and we enjoy the company of our inspirational cow :). Here, have my favourite inspirational quote (after a couple iterations): <img src="https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day2/thumbnail.png" class="img-fluid" alt="lolcow"></p>
+
+
+</section>
+</section>
+</section>
+
+ ]]></description>
+  <category>diary</category>
+  <guid>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day2/</guid>
+  <pubDate>Tue, 07 Oct 2025 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Day 1</title>
   <dc:creator>Joel Tekoniemi</dc:creator>
