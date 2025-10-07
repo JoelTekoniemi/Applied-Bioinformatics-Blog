@@ -1,0 +1,43 @@
+---
+title: "Day 2"
+author: "Joel Tekoniemi"
+date: "2025-10-07"
+categories: [diary]
+lightbox: true
+---
+
+# Tuesday
+Today we set up some pixi environments and used slurm to submit batch jobs on the hpc2n cluster. Then, we explored the use of containers with apptainer. Everything done today was on the hpc2n remote cluster.
+
+## Pixi
+The pixi environments are installed into folders and called using `pixi run <...>`. It's pretty simple and new packages can be added to the environment using `pixi add <package name>`. If an environment is not needed anymore, we can delete the folder inside which the environment was created. 
+
+## Job scheduling using SLURM
+On the cluster, we can submit jobs to be run with automatic allocation of resources so that we can focus on other things.
+
+Running pixi with slurm:
+
+`srun -A <PROJECT-ID> -t 15:00 -n 1 pixi run fastqc  --noextract -o fastqc <PATH>/joel/RNAseq-data/*.fastq.gz`
+
+In this case, we used an example data set of RNA-seq files and ran fastqc.
+The dataset is accessible at [PRJNA369563](https://www.ebi.ac.uk/ena/browser/view/PRJNA369563)
+
+## Containers
+For this course, we used apptainer to run and build containers. Ready-made (rocommended) containers can be obtained from dockerhub or seqera, and in this case we used both.
+First, we pulled the vcftools container, after which we pulled fastqc in order to re-run qc on the sequencing reads above, but using a container and batch script.
+Running fastqc in a container:
+`apptainer exec ../containers/fastqc_0.12.1.sif fastqc -o ../fastqc-container --noextract ../*fastq.gz`
+
+### Building a container
+Using a definition file, containers can be built relatively simply. When the container is run using the `run` command, the code under the `%runscript` block will be run automatically. This can be overruled with the `exec` comand.
+
+Examples:
+
+`$ apptainer run containers/lolcow.sif`
+
+
+`$ apptainer exec containers/lolcow.sif "date|cowsay"`
+
+This is the peak of the day's accomplishments, and we enjoy the company of our inspirational cow :).
+Here, have my favourite inspirational quote (after a couple iterations):
+![lolcow](thumbnail.png)

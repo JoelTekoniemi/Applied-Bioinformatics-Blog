@@ -1,0 +1,12 @@
+{
+  "hash": "dc7b0c0811b4bc726275b3ebf8a8bcde",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Day 2\"\nauthor: \"Joel Tekoniemi\"\ndate: \"2025-10-07\"\ncategories: [diary]\nlightbox: true\njupyter: python3\n---\n\n# Tuesday\nToday we set up some pixi environments and used slurm to submit batch jobs on the hpc2n cluster. Then, we explored the use of containers with apptainer. Everything done today was on the hpc2n remote cluster.\n\n## Pixi\nThe pixi environments are installed into folders and called using `pixi run <...>`. It's pretty simple and new packages can be added to the environment using `pixi add <package name>`. If an environment is not needed anymore, we can delete the folder inside which the environment was created. \n\n## Job scheduling using SLURM\nOn the cluster, we can submit jobs to be run with automatic allocation of resources so that we can focus on other things.\n\nRunning pixi with slurm:\n\n`srun -A <PROJECT-ID> -t 15:00 -n 1 pixi run fastqc  --noextract -o fastqc <PATH>/joel/RNAseq-data/*.fastq.gz`\n\nIn this case, we used an example data set of RNA-seq files and ran fastqc.\nThe dataset is accessible at [PRJNA369563](https://www.ebi.ac.uk/ena/browser/view/PRJNA369563)\n\n## Containers\nFor this course, we used apptainer to run and build containers. Ready-made (rocommended) containers can be obtained from dockerhub or seqera, and in this case we used both.\nFirst, we pulled the vcftools container, after which we pulled fastqc in order to re-run qc on the sequencing reads above, but using a container and batch script.\nRunning fastqc in a container:\n`apptainer exec ../containers/fastqc_0.12.1.sif fastqc -o ../fastqc-container --noextract ../*fastq.gz`\n\n### Building a contatiner\nUsing a definition file, containers can be built relatively simply. When the container is run using the `run` command, the code under the `%runscript` block will be run automatically. This can be overruled with the `exec` comand.\n\nExamples:\n\n`$ apptainer run containers/lolcow.sif`\n\n\n`$ apptainer exec containers/lolcow.sif \"date|cowsay\"`\n\nThis is the peak of the day's accomplishments, and we enjoy the company of our inspirational cow :).\nHere, have my favourite inspirational quote (after a couple iterations):\n![lolcow](thumbnail.png)\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
