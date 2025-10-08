@@ -1,0 +1,73 @@
+---
+title: "Day 3"
+author: "Joel Tekoniemi"
+date: "2025-10-08"
+categories: [diary]
+lightbox: true
+---
+
+# Workflows
+
+Workflow / pipeline = many scripts (usually one per tool), deployed one after the other
+
+Workflow managers help to connect scripts in a pipeline, with automatic control over resource allocation and error management, e.g. re-submitting a batch job with double memory if it failed.
+
+## Nextflow
+Open-source workflow manager.
+Channels: contain data, input / output
+Process: scripts
+
+Queue channel: unidirectional FIFO queue, can be read only once in the pipeline
+
+Value channel: can be read multiple times
+
+Execution abstraction
+
+### Example for srun:
+`srun -A project_ID -t 15:00 -n 1 fastqc --noextract -o fastqc data data/sample_1.fastq.gz data/sample_2.fastq.gz`
+ 
+—> mix of information about command and info about script in the same line
+In Nextflow, these are separate. Executor: determines how the script is run in the target platform
+
+## Netflow scripts
+1. Adding variables into channel
+—> Channel.of()
+
+2. Defining process blocks
+Channel operators can be used on channels
+Input can be value, file, path, etc. —> the variable type is specified
+Output is similar, can also be “stdout” which is just the terminal output
+
+3. Workflow block
+
+Modify and resume
+Runs are cached, and the output can be retrieved using the -resume flag, instead of rerunning the whole script.
+Double-dashes can be specified to change nf process parameters: --greeting ‘Bonjour le monde’ —> changes params.greeting.
+
+## Cleanup
+nextflow log: see run history
+nextflow clean: deletes project cache and working directories.
+	-before: cleans up previous runs
+pixi run nextflow clean -before <RUN NAME> -f
+
+## RNA-seq pipeline
+Executor setup in nextflow.config
+Processes: slurm as executor + time, cpus, etc.
+Other statements:
+• Resume
+• Singularity containers
+• Executor account: E.g. HPC2N 
+
+## nf-core
+
+Community nextflow pipelines with extensive documentation.
+
+Interesting pipelines
+• rnaseq: classic RNA-seq, provides gene expression matrix as output 
+• pixelator: Pixelgen MPX/PNA data
+• raredisease: variant calling and scoring from WGS/WES from rare disease patients
+
+# AI in Bioinformatics
+We ended the day with a short discussion about use of LLMs in bioinformatics.
+
+![](thumbnail.png)
