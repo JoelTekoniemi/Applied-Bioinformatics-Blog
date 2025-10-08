@@ -14,57 +14,99 @@
     "text": "This is my first post in my Quarto blog. Welcome!\n There is no content in this post."
   },
   {
+    "objectID": "posts/Day3/Day3.html",
+    "href": "posts/Day3/Day3.html",
+    "title": "Day 3",
+    "section": "",
+    "text": "Workflow / pipeline = many scripts (usually one per tool), deployed one after the other\nWorkflow managers help to connect scripts in a pipeline, with automatic control over resource allocation and error management, e.g. re-submitting a batch job with double memory if it failed.\n\n\nOpen-source workflow manager. Channels: contain data, input / output Process: scripts\nQueue channel: unidirectional FIFO queue, can be read only once in the pipeline\nValue channel: can be read multiple times\nExecution abstraction\n\n\nsrun -A project_ID -t 15:00 -n 1 fastqc --noextract -o fastqc data data/sample_1.fastq.gz data/sample_2.fastq.gz\n—&gt; mix of information about command and info about script in the same line In Nextflow, these are separate. Executor: determines how the script is run in the target platform\n\n\n\n\n\nAdding variables into channel —&gt; Channel.of()\nDefining process blocks Channel operators can be used on channels Input can be value, file, path, etc. —&gt; the variable type is specified Output is similar, can also be “stdout” which is just the terminal output\nWorkflow block\n\nModify and resume Runs are cached, and the output can be retrieved using the -resume flag, instead of rerunning the whole script. Double-dashes can be specified to change nf process parameters: –greeting ‘Bonjour le monde’ —&gt; changes params.greeting.\n\n\n\nnextflow log: see run history nextflow clean: deletes project cache and working directories. -before: cleans up previous runs pixi run nextflow clean -before  -f\n\n\n\nExecutor setup in nextflow.config Processes: slurm as executor + time, cpus, etc. Other statements: • Resume • Singularity containers • Executor account: E.g. HPC2N\n\n\n\nCommunity nextflow pipelines with extensive documentation.\nInteresting pipelines • rnaseq: classic RNA-seq, provides gene expression matrix as output • pixelator: Pixelgen MPX/PNA data • raredisease: variant calling and scoring from WGS/WES from rare disease patients"
+  },
+  {
+    "objectID": "posts/Day3/Day3.html#nextflow",
+    "href": "posts/Day3/Day3.html#nextflow",
+    "title": "Day 3",
+    "section": "",
+    "text": "Open-source workflow manager. Channels: contain data, input / output Process: scripts\nQueue channel: unidirectional FIFO queue, can be read only once in the pipeline\nValue channel: can be read multiple times\nExecution abstraction\n\n\nsrun -A project_ID -t 15:00 -n 1 fastqc --noextract -o fastqc data data/sample_1.fastq.gz data/sample_2.fastq.gz\n—&gt; mix of information about command and info about script in the same line In Nextflow, these are separate. Executor: determines how the script is run in the target platform"
+  },
+  {
+    "objectID": "posts/Day3/Day3.html#netflow-scripts",
+    "href": "posts/Day3/Day3.html#netflow-scripts",
+    "title": "Day 3",
+    "section": "",
+    "text": "Adding variables into channel —&gt; Channel.of()\nDefining process blocks Channel operators can be used on channels Input can be value, file, path, etc. —&gt; the variable type is specified Output is similar, can also be “stdout” which is just the terminal output\nWorkflow block\n\nModify and resume Runs are cached, and the output can be retrieved using the -resume flag, instead of rerunning the whole script. Double-dashes can be specified to change nf process parameters: –greeting ‘Bonjour le monde’ —&gt; changes params.greeting."
+  },
+  {
+    "objectID": "posts/Day3/Day3.html#cleanup",
+    "href": "posts/Day3/Day3.html#cleanup",
+    "title": "Day 3",
+    "section": "",
+    "text": "nextflow log: see run history nextflow clean: deletes project cache and working directories. -before: cleans up previous runs pixi run nextflow clean -before  -f"
+  },
+  {
+    "objectID": "posts/Day3/Day3.html#rna-seq-pipeline",
+    "href": "posts/Day3/Day3.html#rna-seq-pipeline",
+    "title": "Day 3",
+    "section": "",
+    "text": "Executor setup in nextflow.config Processes: slurm as executor + time, cpus, etc. Other statements: • Resume • Singularity containers • Executor account: E.g. HPC2N"
+  },
+  {
+    "objectID": "posts/Day3/Day3.html#nf-core",
+    "href": "posts/Day3/Day3.html#nf-core",
+    "title": "Day 3",
+    "section": "",
+    "text": "Community nextflow pipelines with extensive documentation.\nInteresting pipelines • rnaseq: classic RNA-seq, provides gene expression matrix as output • pixelator: Pixelgen MPX/PNA data • raredisease: variant calling and scoring from WGS/WES from rare disease patients"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "JT_Blog",
     "section": "",
-    "text": "Day 2\n\n\n\ndiary\n\n\n\n\n\n\n\n\n\nOct 7, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\ndiary\n\n\n\n\n\n\n\n\n\nOct 6, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nHow to make a quarto blog\n\n\n\ntutorial\n\n\n\n\n\n\n\n\n\nOct 6, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\nNo matching items"
+    "text": "Day 3\n\n\n\ndiary\n\n\n\n\n\n\n\n\n\nOct 8, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nDay 2\n\n\n\ndiary\n\n\n\n\n\n\n\n\n\nOct 7, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\ndiary\n\n\n\n\n\n\n\n\n\nOct 6, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nHow to make a quarto blog\n\n\n\ntutorial\n\n\n\n\n\n\n\n\n\nOct 6, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/Day1/index.html",
-    "href": "posts/Day1/index.html",
+    "objectID": "posts/Day1/Day1.html",
+    "href": "posts/Day1/Day1.html",
     "title": "Day 1",
     "section": "",
     "text": "On Monday, we covered some topics relating to good data practice, git and quarto. At the end of the day, we set ourselves up with individual blogs for documenting course progress.\n\n\n\nIntroduction • Course content, schedule etc • People intros\nData management Data cycle FAIR principles Good data management practices • Research documentation • Data organisation • Information security • Ethics and legislation (Sweden: research data needs to be kept for 10 years)\n\nData sets: central dogma of biology &lt;-&gt; bioinformatics\nBest practices • Raw data in separate directory • Code in another directory • Output (figs) in separate directory • Version control • README in every directory • File naming that is easy to understand for humans and machines (no ö, spaces characters) • Use non-proprietary formats —&gt; .csv instead of .xlsx\n\nLiterate programming • Code chunks • Markdown Notebook in quarto\nVersion control Git and good git practices Clear and informative, commit often (multiple times per day - once per day) —&gt; Writing blog posts every day\nEnvironment managers Using pixi in this course\nContainers Includes everything necessary to run code and do the necessary analysis, including the OS.\nWorkflow manager —&gt; Nextflow\n\n\n\n\n• git branch • git checkout • git merge • git diff • git add • git commit -m “Message” Commit on a single theme, message should be in imperative • git push\nNotes on branching • git branch —&gt; creates a new branch based on the current commit\nMerging • specific branch or specific commit • conflicts need to be resolved\nAdd and commit • add —&gt; taking area • commit —&gt; send to repo\nPush, pull and collaborate • git push origin main\nExercise: alphabetise a list • Format first name, last name • Branching • Merge with neighbours via commit, pull, merge and push until 14 names are in alphabetical order."
   },
   {
-    "objectID": "posts/Day1/index.html#intro-to-course-by-amrei",
-    "href": "posts/Day1/index.html#intro-to-course-by-amrei",
+    "objectID": "posts/Day1/Day1.html#intro-to-course-by-amrei",
+    "href": "posts/Day1/Day1.html#intro-to-course-by-amrei",
     "title": "Day 1",
     "section": "",
     "text": "Introduction • Course content, schedule etc • People intros\nData management Data cycle FAIR principles Good data management practices • Research documentation • Data organisation • Information security • Ethics and legislation (Sweden: research data needs to be kept for 10 years)\n\nData sets: central dogma of biology &lt;-&gt; bioinformatics\nBest practices • Raw data in separate directory • Code in another directory • Output (figs) in separate directory • Version control • README in every directory • File naming that is easy to understand for humans and machines (no ö, spaces characters) • Use non-proprietary formats —&gt; .csv instead of .xlsx\n\nLiterate programming • Code chunks • Markdown Notebook in quarto\nVersion control Git and good git practices Clear and informative, commit often (multiple times per day - once per day) —&gt; Writing blog posts every day\nEnvironment managers Using pixi in this course\nContainers Includes everything necessary to run code and do the necessary analysis, including the OS.\nWorkflow manager —&gt; Nextflow"
   },
   {
-    "objectID": "posts/Day1/index.html#git-and-github-by-samuel-flores",
-    "href": "posts/Day1/index.html#git-and-github-by-samuel-flores",
+    "objectID": "posts/Day1/Day1.html#git-and-github-by-samuel-flores",
+    "href": "posts/Day1/Day1.html#git-and-github-by-samuel-flores",
     "title": "Day 1",
     "section": "",
     "text": "• git branch • git checkout • git merge • git diff • git add • git commit -m “Message” Commit on a single theme, message should be in imperative • git push\nNotes on branching • git branch —&gt; creates a new branch based on the current commit\nMerging • specific branch or specific commit • conflicts need to be resolved\nAdd and commit • add —&gt; taking area • commit —&gt; send to repo\nPush, pull and collaborate • git push origin main\nExercise: alphabetise a list • Format first name, last name • Branching • Merge with neighbours via commit, pull, merge and push until 14 names are in alphabetical order."
   },
   {
-    "objectID": "posts/Day2/index.html",
-    "href": "posts/Day2/index.html",
+    "objectID": "posts/Day2/Day2.html",
+    "href": "posts/Day2/Day2.html",
     "title": "Day 2",
     "section": "",
     "text": "Today we set up some pixi environments and used slurm to submit batch jobs on the hpc2n cluster. Then, we explored the use of containers with apptainer. Everything done today was on the hpc2n remote cluster.\n\n\nThe pixi environments are installed into folders and called using pixi run &lt;...&gt;. It’s pretty simple and new packages can be added to the environment using pixi add &lt;package name&gt;. If an environment is not needed anymore, we can delete the folder inside which the environment was created.\n\n\n\nOn the cluster, we can submit jobs to be run with automatic allocation of resources so that we can focus on other things.\nRunning pixi with slurm:\nsrun -A &lt;PROJECT-ID&gt; -t 15:00 -n 1 pixi run fastqc  --noextract -o fastqc &lt;PATH&gt;/joel/RNAseq-data/*.fastq.gz\nIn this case, we used an example data set of RNA-seq files and ran fastqc. The dataset is accessible at PRJNA369563\n\n\n\nFor this course, we used apptainer to run and build containers. Ready-made (rocommended) containers can be obtained from dockerhub or seqera, and in this case we used both. First, we pulled the vcftools container, after which we pulled fastqc in order to re-run qc on the sequencing reads above, but using a container and batch script. Running fastqc in a container: apptainer exec ../containers/fastqc_0.12.1.sif fastqc -o ../fastqc-container --noextract ../*fastq.gz\n\n\nUsing a definition file, containers can be built relatively simply. When the container is run using the run command, the code under the %runscript block will be run automatically. This can be overruled with the exec comand.\nExamples:\n$ apptainer run containers/lolcow.sif\n$ apptainer exec containers/lolcow.sif \"date|cowsay\"\nThis is the peak of the day’s accomplishments, and we enjoy the company of our inspirational cow :). Here, have my favourite inspirational quote (after a couple iterations):"
   },
   {
-    "objectID": "posts/Day2/index.html#pixi",
-    "href": "posts/Day2/index.html#pixi",
+    "objectID": "posts/Day2/Day2.html#pixi",
+    "href": "posts/Day2/Day2.html#pixi",
     "title": "Day 2",
     "section": "",
     "text": "The pixi environments are installed into folders and called using pixi run &lt;...&gt;. It’s pretty simple and new packages can be added to the environment using pixi add &lt;package name&gt;. If an environment is not needed anymore, we can delete the folder inside which the environment was created."
   },
   {
-    "objectID": "posts/Day2/index.html#job-scheduling-using-slurm",
-    "href": "posts/Day2/index.html#job-scheduling-using-slurm",
+    "objectID": "posts/Day2/Day2.html#job-scheduling-using-slurm",
+    "href": "posts/Day2/Day2.html#job-scheduling-using-slurm",
     "title": "Day 2",
     "section": "",
     "text": "On the cluster, we can submit jobs to be run with automatic allocation of resources so that we can focus on other things.\nRunning pixi with slurm:\nsrun -A &lt;PROJECT-ID&gt; -t 15:00 -n 1 pixi run fastqc  --noextract -o fastqc &lt;PATH&gt;/joel/RNAseq-data/*.fastq.gz\nIn this case, we used an example data set of RNA-seq files and ran fastqc. The dataset is accessible at PRJNA369563"
   },
   {
-    "objectID": "posts/Day2/index.html#containers",
-    "href": "posts/Day2/index.html#containers",
+    "objectID": "posts/Day2/Day2.html#containers",
+    "href": "posts/Day2/Day2.html#containers",
     "title": "Day 2",
     "section": "",
     "text": "For this course, we used apptainer to run and build containers. Ready-made (rocommended) containers can be obtained from dockerhub or seqera, and in this case we used both. First, we pulled the vcftools container, after which we pulled fastqc in order to re-run qc on the sequencing reads above, but using a container and batch script. Running fastqc in a container: apptainer exec ../containers/fastqc_0.12.1.sif fastqc -o ../fastqc-container --noextract ../*fastq.gz\n\n\nUsing a definition file, containers can be built relatively simply. When the container is run using the run command, the code under the %runscript block will be run automatically. This can be overruled with the exec comand.\nExamples:\n$ apptainer run containers/lolcow.sif\n$ apptainer exec containers/lolcow.sif \"date|cowsay\"\nThis is the peak of the day’s accomplishments, and we enjoy the company of our inspirational cow :). Here, have my favourite inspirational quote (after a couple iterations):"

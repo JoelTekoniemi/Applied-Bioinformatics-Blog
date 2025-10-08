@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Joel Tekoniemi">
-<meta name="dcterms.date" content="2025-10-06">
+<meta name="dcterms.date" content="2025-10-08">
 
-<title>Day 1 – JT_Blog</title>
+<title>Day 3 – JT_Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-ff63373b1067ca6f91cf1456aa1f00a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-8fd1faf6fd93e4e6d207ae0f9db51d78.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -117,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Day 1</h1>
+      <h1 class="title">Day 3</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">diary</div>
               </div>
@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 6, 2025</p>
+        <p class="date">October 8, 2025</p>
       </div>
     </div>
     
@@ -156,37 +156,51 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="monday" class="level1">
-<h1>Monday</h1>
-<p>On Monday, we covered some topics relating to good data practice, git and quarto. At the end of the day, we set ourselves up with individual blogs for documenting course progress.</p>
-<section id="intro-to-course-by-amrei" class="level2">
-<h2 class="anchored" data-anchor-id="intro-to-course-by-amrei">Intro to course by Amrei</h2>
-<ol type="1">
-<li><p>Introduction •&nbsp;Course content, schedule etc •&nbsp;People intros</p></li>
-<li><p>Data management Data cycle FAIR principles Good data management practices •&nbsp;Research documentation •&nbsp;Data organisation •&nbsp;Information security •&nbsp;Ethics and legislation (Sweden: research data needs to be kept for 10 years)</p></li>
-</ol>
-<p>Data sets: central dogma of biology &lt;-&gt; bioinformatics</p>
-<p>Best practices •&nbsp;Raw data in separate directory •&nbsp;Code in another directory •&nbsp;Output (figs) in separate directory •&nbsp;Version control •&nbsp;README in every directory •&nbsp;File naming that is easy to understand for humans and machines (no ö, spaces characters) •&nbsp;Use non-proprietary formats —&gt; .csv instead of .xlsx</p>
-<ol start="3" type="1">
-<li><p>Literate programming •&nbsp;Code chunks •&nbsp;Markdown Notebook in quarto</p></li>
-<li><p>Version control Git and good git practices Clear and informative, commit often (multiple times per day - once per day) —&gt; Writing blog posts every day</p></li>
-<li><p>Environment managers Using pixi in this course</p></li>
-<li><p>Containers Includes everything necessary to run code and do the necessary analysis, including the OS.</p></li>
-<li><p>Workflow manager —&gt; Nextflow</p></li>
-</ol>
+<section id="workflows" class="level1">
+<h1>Workflows</h1>
+<p>Workflow / pipeline = many scripts (usually one per tool), deployed one after the other</p>
+<p>Workflow managers help to connect scripts in a pipeline, with automatic control over resource allocation and error management, e.g.&nbsp;re-submitting a batch job with double memory if it failed.</p>
+<section id="nextflow" class="level2">
+<h2 class="anchored" data-anchor-id="nextflow">Nextflow</h2>
+<p>Open-source workflow manager. Channels: contain data, input / output Process: scripts</p>
+<p>Queue channel: unidirectional FIFO queue, can be read only once in the pipeline</p>
+<p>Value channel: can be read multiple times</p>
+<p>Execution abstraction</p>
+<section id="example-for-srun" class="level3">
+<h3 class="anchored" data-anchor-id="example-for-srun">Example for srun:</h3>
+<p><code>srun -A project_ID -t 15:00 -n 1 fastqc --noextract -o fastqc data data/sample_1.fastq.gz data/sample_2.fastq.gz</code></p>
+<p>—&gt; mix of information about command and info about script in the same line In Nextflow, these are separate. Executor: determines how the script is run in the target platform</p>
 </section>
-<section id="git-and-github-by-samuel-flores" class="level2">
-<h2 class="anchored" data-anchor-id="git-and-github-by-samuel-flores">Git and GitHub by Samuel Flores</h2>
-<p>•&nbsp;git branch •&nbsp;git checkout •&nbsp;git merge •&nbsp;git diff •&nbsp;git add •&nbsp;git commit -m “Message” Commit on a single theme, message should be in imperative •&nbsp;git push</p>
-<p>Notes on branching • git branch —&gt; creates a new branch based on the current commit</p>
-<p>Merging •&nbsp;specific branch or specific commit •&nbsp;conflicts need to be resolved</p>
-<p>Add and commit •&nbsp;add —&gt; taking area •&nbsp;commit —&gt; send to repo</p>
-<p>Push, pull and collaborate •&nbsp;git push origin main</p>
-<p>Exercise: alphabetise a list •&nbsp;Format first name, last name • Branching •&nbsp;Merge with neighbours via commit, pull, merge and push until 14 names are in alphabetical order.</p>
+</section>
+<section id="netflow-scripts" class="level2">
+<h2 class="anchored" data-anchor-id="netflow-scripts">Netflow scripts</h2>
+<ol type="1">
+<li><p>Adding variables into channel —&gt; Channel.of()</p></li>
+<li><p>Defining process blocks Channel operators can be used on channels Input can be value, file, path, etc. —&gt; the variable type is specified Output is similar, can also be “stdout” which is just the terminal output</p></li>
+<li><p>Workflow block</p></li>
+</ol>
+<p>Modify and resume Runs are cached, and the output can be retrieved using the -resume flag, instead of rerunning the whole script. Double-dashes can be specified to change nf process parameters: –greeting ‘Bonjour le monde’ —&gt; changes params.greeting.</p>
+</section>
+<section id="cleanup" class="level2">
+<h2 class="anchored" data-anchor-id="cleanup">Cleanup</h2>
+<p>nextflow log: see run history nextflow clean: deletes project cache and working directories. -before: cleans up previous runs pixi run nextflow clean -before <run name=""> -f</run></p>
+</section>
+<section id="rna-seq-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="rna-seq-pipeline">RNA-seq pipeline</h2>
+<p>Executor setup in nextflow.config Processes: slurm as executor + time, cpus, etc. Other statements: • Resume •&nbsp;Singularity containers •&nbsp;Executor account: E.g. HPC2N</p>
+</section>
+<section id="nf-core" class="level2">
+<h2 class="anchored" data-anchor-id="nf-core">nf-core</h2>
+<p>Community nextflow pipelines with extensive documentation.</p>
+<p>Interesting pipelines •&nbsp;rnaseq: classic RNA-seq, provides gene expression matrix as output •&nbsp;pixelator: Pixelgen MPX/PNA data •&nbsp;raredisease: variant calling and scoring from WGS/WES from rare disease patients</p>
+</section>
+</section>
+<section id="ai-in-bioinformatics" class="level1">
+<h1>AI in Bioinformatics</h1>
+<p>We ended the day with a short discussion about use of LLMs in bioinformatics.</p>
 <p><a href="thumbnail.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="thumbnail.png" class="img-fluid"></a></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

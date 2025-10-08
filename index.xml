@@ -10,11 +10,73 @@
 <atom:link href="https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Joels blog for Applied Bioinformatics</description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Tue, 07 Oct 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 08 Oct 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Day 3</title>
+  <dc:creator>Joel Tekoniemi</dc:creator>
+  <link>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day3/Day3.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="workflows" class="level1">
+<h1>Workflows</h1>
+<p>Workflow / pipeline = many scripts (usually one per tool), deployed one after the other</p>
+<p>Workflow managers help to connect scripts in a pipeline, with automatic control over resource allocation and error management, e.g.&nbsp;re-submitting a batch job with double memory if it failed.</p>
+<section id="nextflow" class="level2">
+<h2 class="anchored" data-anchor-id="nextflow">Nextflow</h2>
+<p>Open-source workflow manager. Channels: contain data, input / output Process: scripts</p>
+<p>Queue channel: unidirectional FIFO queue, can be read only once in the pipeline</p>
+<p>Value channel: can be read multiple times</p>
+<p>Execution abstraction</p>
+<section id="example-for-srun" class="level3">
+<h3 class="anchored" data-anchor-id="example-for-srun">Example for srun:</h3>
+<p><code>srun -A project_ID -t 15:00 -n 1 fastqc --noextract -o fastqc data data/sample_1.fastq.gz data/sample_2.fastq.gz</code></p>
+<p>—&gt; mix of information about command and info about script in the same line In Nextflow, these are separate. Executor: determines how the script is run in the target platform</p>
+</section>
+</section>
+<section id="netflow-scripts" class="level2">
+<h2 class="anchored" data-anchor-id="netflow-scripts">Netflow scripts</h2>
+<ol type="1">
+<li><p>Adding variables into channel —&gt; Channel.of()</p></li>
+<li><p>Defining process blocks Channel operators can be used on channels Input can be value, file, path, etc. —&gt; the variable type is specified Output is similar, can also be “stdout” which is just the terminal output</p></li>
+<li><p>Workflow block</p></li>
+</ol>
+<p>Modify and resume Runs are cached, and the output can be retrieved using the -resume flag, instead of rerunning the whole script. Double-dashes can be specified to change nf process parameters: –greeting ‘Bonjour le monde’ —&gt; changes params.greeting.</p>
+</section>
+<section id="cleanup" class="level2">
+<h2 class="anchored" data-anchor-id="cleanup">Cleanup</h2>
+<p>nextflow log: see run history nextflow clean: deletes project cache and working directories. -before: cleans up previous runs pixi run nextflow clean -before <run name=""> -f</run></p>
+</section>
+<section id="rna-seq-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="rna-seq-pipeline">RNA-seq pipeline</h2>
+<p>Executor setup in nextflow.config Processes: slurm as executor + time, cpus, etc. Other statements: • Resume •&nbsp;Singularity containers •&nbsp;Executor account: E.g. HPC2N</p>
+</section>
+<section id="nf-core" class="level2">
+<h2 class="anchored" data-anchor-id="nf-core">nf-core</h2>
+<p>Community nextflow pipelines with extensive documentation.</p>
+<p>Interesting pipelines •&nbsp;rnaseq: classic RNA-seq, provides gene expression matrix as output •&nbsp;pixelator: Pixelgen MPX/PNA data •&nbsp;raredisease: variant calling and scoring from WGS/WES from rare disease patients</p>
+</section>
+</section>
+<section id="ai-in-bioinformatics" class="level1">
+<h1>AI in Bioinformatics</h1>
+<p>We ended the day with a short discussion about use of LLMs in bioinformatics.</p>
+<p><a href="thumbnail.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day3/thumbnail.png" class="img-fluid"></a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>diary</category>
+  <guid>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day3/Day3.html</guid>
+  <pubDate>Wed, 08 Oct 2025 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Day 2</title>
   <dc:creator>Joel Tekoniemi</dc:creator>
-  <link>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day2/</link>
+  <link>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day2/Day2.html</link>
   <description><![CDATA[ 
 
 
@@ -53,13 +115,13 @@
 
  ]]></description>
   <category>diary</category>
-  <guid>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day2/</guid>
+  <guid>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day2/Day2.html</guid>
   <pubDate>Tue, 07 Oct 2025 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Day 1</title>
   <dc:creator>Joel Tekoniemi</dc:creator>
-  <link>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day1/</link>
+  <link>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day1/Day1.html</link>
   <description><![CDATA[ 
 
 
@@ -101,7 +163,7 @@
 
  ]]></description>
   <category>diary</category>
-  <guid>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day1/</guid>
+  <guid>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day1/Day1.html</guid>
   <pubDate>Mon, 06 Oct 2025 00:00:00 GMT</pubDate>
 </item>
 <item>
