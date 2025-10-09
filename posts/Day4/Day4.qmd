@@ -1,0 +1,30 @@
+---
+title: "Day 4"
+author: "Joel Tekoniemi"
+date: "2025-10-09"
+categories: [diary]
+lightbox: true
+---
+
+# Nextflow
+
+## Pipeline setup
+It is pretty easy to setup nextflow pipelines with the help of nf-core, but there is nonetheless some configuration that is needed:
+- Create Pixi environment
+	- add channels conda-forge and bioconda `-c conda-forge -c bioconda`
+	- add packages nextflow and nf-core
+- Create data folder and other necessary folder for pipeline
+	E.g. genome, results, 
+	Symbolic link `nl` for data to avoid copying
+- Navigate to the nf-core pipeline and use the installer
+
+
+Example 
+
+pixi run nextflow run nf-core/rnaseq -r 3.19.0 -resume -params-file nf-params.json -c hpc2n.config
+
+![rna-seq-pipeline](rna-seq-pipeline.png)
+
+## Fancy stuff
+- tags: tags are shown next to processes when running pipeline
+- workflow.onComplete: more info and user-friendly messages upon completed workflow

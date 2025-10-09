@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Joel Tekoniemi">
+<meta name="dcterms.date" content="2025-10-08">
 
-<title>JT_Blog</title>
+<title>Day 3 – JT_Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +25,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-26827f95213357c060b998e0666f8ebe.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-ff63373b1067ca6f91cf1456aa1f00a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,79 +73,21 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
+<link rel="stylesheet" href="../../styles.css">
+</head>
 
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="JT_Blog" href="index.xml" data-external="1"></head>
-
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">JT_Blog</span>
     </a>
   </div>
@@ -153,7 +98,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -171,192 +116,94 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">JT_Blog</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Day 3</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">diary</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Joel Tekoniemi </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 8, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-unnumbered"><div class="category" data-category="ZGlhcnk=">diary</div><div class="category" data-category="dHV0b3JpYWw=">tutorial</div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="workflows" class="level1">
+<h1>Workflows</h1>
+<p>Workflow / pipeline = many scripts (usually one per tool), deployed one after the other</p>
+<p>Workflow managers help to connect scripts in a pipeline, with automatic control over resource allocation and error management, e.g.&nbsp;re-submitting a batch job with double memory if it failed.</p>
+<section id="nextflow" class="level2">
+<h2 class="anchored" data-anchor-id="nextflow">Nextflow</h2>
+<p>Open-source workflow manager. Channels: contain data, input / output Process: scripts</p>
+<p>Queue channel: unidirectional FIFO queue, can be read only once in the pipeline</p>
+<p>Value channel: can be read multiple times</p>
+<p>Execution abstraction</p>
+<section id="example-for-srun" class="level3">
+<h3 class="anchored" data-anchor-id="example-for-srun">Example for srun:</h3>
+<p><code>srun -A project_ID -t 15:00 -n 1 fastqc --noextract -o fastqc data data/sample_1.fastq.gz data/sample_2.fastq.gz</code></p>
+<p>—&gt; mix of information about command and info about script in the same line In Nextflow, these are separate. Executor: determines how the script is run in the target platform</p>
+</section>
+</section>
+<section id="netflow-scripts" class="level2">
+<h2 class="anchored" data-anchor-id="netflow-scripts">Netflow scripts</h2>
+<ol type="1">
+<li><p>Adding variables into channel —&gt; Channel.of()</p></li>
+<li><p>Defining process blocks Channel operators can be used on channels Input can be value, file, path, etc. —&gt; the variable type is specified Output is similar, can also be “stdout” which is just the terminal output</p></li>
+<li><p>Workflow block</p></li>
+</ol>
+<p>Modify and resume Runs are cached, and the output can be retrieved using the -resume flag, instead of rerunning the whole script. Double-dashes can be specified to change nf process parameters: –greeting ‘Bonjour le monde’ —&gt; changes params.greeting.</p>
+</section>
+<section id="cleanup" class="level2">
+<h2 class="anchored" data-anchor-id="cleanup">Cleanup</h2>
+<p>nextflow log: see run history nextflow clean: deletes project cache and working directories. -before: cleans up previous runs pixi run nextflow clean -before <run name=""> -f</run></p>
+</section>
+<section id="rna-seq-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="rna-seq-pipeline">RNA-seq pipeline</h2>
+<p>Executor setup in nextflow.config Processes: slurm as executor + time, cpus, etc. Other statements: • Resume •&nbsp;Singularity containers •&nbsp;Executor account: E.g. HPC2N</p>
+</section>
+<section id="nf-core" class="level2">
+<h2 class="anchored" data-anchor-id="nf-core">nf-core</h2>
+<p>Community nextflow pipelines with extensive documentation.</p>
+<p>Interesting pipelines •&nbsp;rnaseq: classic RNA-seq, provides gene expression matrix as output •&nbsp;pixelator: Pixelgen MPX/PNA data •&nbsp;raredisease: variant calling and scoring from WGS/WES from rare disease patients</p>
+</section>
+</section>
+<section id="ai-in-bioinformatics" class="level1">
+<h1>AI in Bioinformatics</h1>
+<p>We ended the day with a short discussion about use of LLMs in bioinformatics.</p>
+<p><a href="thumbnail.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="thumbnail.png" class="img-fluid"></a></p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ZGlhcnk=" data-listing-date-sort="1759960800000" data-listing-file-modified-sort="1760047387103" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
-<div class="thumbnail"><a href="./posts/Day4/Day4.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/Day4/rna-seq-pipeline.png" alt="rna-seq-pipeline"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Day4/Day4.html" class="no-external">Day 4</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGlhcnk='); return false;">diary</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/Day4/Day4.html" class="no-external">
-It is pretty easy to setup nextflow pipelines with the help of nf-core, but there is nonetheless some configuration that is needed: - Create Pixi environment - add channels…<code></code><code></code>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Day4/Day4.html" class="no-external">
-<div class="listing-date">
-Oct 9, 2025
-</div>
-<div class="listing-author">
-Joel Tekoniemi
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="ZGlhcnk=" data-listing-date-sort="1759874400000" data-listing-file-modified-sort="1759935094010" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="280">
-<div class="thumbnail"><a href="./posts/Day3/Day3.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/Day3/thumbnail.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Day3/Day3.html" class="no-external">Day 3</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGlhcnk='); return false;">diary</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/Day3/Day3.html" class="no-external">
-Workflow / pipeline = many scripts (usually one per tool), deployed one after the other
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Day3/Day3.html" class="no-external">
-<div class="listing-date">
-Oct 8, 2025
-</div>
-<div class="listing-author">
-Joel Tekoniemi
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="ZGlhcnk=" data-listing-date-sort="1759788000000" data-listing-file-modified-sort="1759851156606" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="285">
-<div class="thumbnail"><a href="./posts/Day2/Day2.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/Day2/thumbnail.png" alt="lolcow"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Day2/Day2.html" class="no-external">Day 2</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGlhcnk='); return false;">diary</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/Day2/Day2.html" class="no-external">
-Today we set up some pixi environments and used slurm to submit batch jobs on the hpc2n cluster. Then, we explored the use of containers with apptainer. Everything done…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Day2/Day2.html" class="no-external">
-<div class="listing-date">
-Oct 7, 2025
-</div>
-<div class="listing-author">
-Joel Tekoniemi
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="dHV0b3JpYWw=" data-listing-date-sort="1759701600000" data-listing-file-modified-sort="1759755631516" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
-<div class="thumbnail"><a href="./posts/welcome/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/welcome/thumbnail.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">How to make a quarto blog</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('dHV0b3JpYWw='); return false;">tutorial</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/welcome/index.html" class="no-external">
-This is my first post in my Quarto blog. Welcome!
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Oct 6, 2025
-</div>
-<div class="listing-author">
-Joel Tekoniemi
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="ZGlhcnk=" data-listing-date-sort="1759701600000" data-listing-file-modified-sort="1759756702051" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="245">
-<div class="thumbnail"><a href="./posts/Day1/Day1.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/Day1/thumbnail.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Day1/Day1.html" class="no-external">Day 1</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGlhcnk='); return false;">diary</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/Day1/Day1.html" class="no-external">
-On Monday, we covered some topics relating to good data practice, git and quarto. At the end of the day, we set ourselves up with individual blogs for documenting course…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Day1/Day1.html" class="no-external">
-<div class="listing-date">
-Oct 6, 2025
-</div>
-<div class="listing-author">
-Joel Tekoniemi
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -758,6 +605,38 @@ Joel Tekoniemi
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
