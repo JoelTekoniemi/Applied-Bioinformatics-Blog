@@ -14,6 +14,34 @@
     "text": "This is my first post in my Quarto blog. Welcome!\n There is no content in this post."
   },
   {
+    "objectID": "posts/Day4/Day4.html",
+    "href": "posts/Day4/Day4.html",
+    "title": "Day 4",
+    "section": "",
+    "text": "It is pretty easy to setup nextflow pipelines with the help of nf-core, but there is nonetheless some configuration that is needed: - Create Pixi environment - add channels conda-forge and bioconda -c conda-forge -c bioconda - add packages nextflow and nf-core - Create data folder and other necessary folder for pipeline E.g. genome, results, Symbolic link nl for data to avoid copying - Navigate to the nf-core pipeline and use the installer\nExample\npixi run nextflow run nf-core/rnaseq -r 3.19.0 -resume -params-file nf-params.json -c hpc2n.config\n\n\n\nrna-seq-pipeline\n\n\n\n\n\n\ntags: tags are shown next to processes when running pipeline\nworkflow.onComplete: more info and user-friendly messages upon completed workflow"
+  },
+  {
+    "objectID": "posts/Day4/Day4.html#pipeline-setup",
+    "href": "posts/Day4/Day4.html#pipeline-setup",
+    "title": "Day 4",
+    "section": "",
+    "text": "It is pretty easy to setup nextflow pipelines with the help of nf-core, but there is nonetheless some configuration that is needed: - Create Pixi environment - add channels conda-forge and bioconda -c conda-forge -c bioconda - add packages nextflow and nf-core - Create data folder and other necessary folder for pipeline E.g. genome, results, Symbolic link nl for data to avoid copying - Navigate to the nf-core pipeline and use the installer\nExample\npixi run nextflow run nf-core/rnaseq -r 3.19.0 -resume -params-file nf-params.json -c hpc2n.config\n\n\n\nrna-seq-pipeline"
+  },
+  {
+    "objectID": "posts/Day4/Day4.html#fancy-stuff",
+    "href": "posts/Day4/Day4.html#fancy-stuff",
+    "title": "Day 4",
+    "section": "",
+    "text": "tags: tags are shown next to processes when running pipeline\nworkflow.onComplete: more info and user-friendly messages upon completed workflow"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "JT_Blog",
+    "section": "",
+    "text": "Day 4\n\n\n\ndiary\n\n\n\n\n\n\n\n\n\nOct 9, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nDay 3\n\n\n\ndiary\n\n\n\n\n\n\n\n\n\nOct 8, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nDay 2\n\n\n\ndiary\n\n\n\n\n\n\n\n\n\nOct 7, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\ndiary\n\n\n\n\n\n\n\n\n\nOct 6, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nHow to make a quarto blog\n\n\n\ntutorial\n\n\n\n\n\n\n\n\n\nOct 6, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "posts/Day3/Day3.html",
     "href": "posts/Day3/Day3.html",
     "title": "Day 3",
@@ -54,13 +82,6 @@
     "title": "Day 3",
     "section": "",
     "text": "Community nextflow pipelines with extensive documentation.\nInteresting pipelines • rnaseq: classic RNA-seq, provides gene expression matrix as output • pixelator: Pixelgen MPX/PNA data • raredisease: variant calling and scoring from WGS/WES from rare disease patients"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "JT_Blog",
-    "section": "",
-    "text": "Day 3\n\n\n\ndiary\n\n\n\n\n\n\n\n\n\nOct 8, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nDay 2\n\n\n\ndiary\n\n\n\n\n\n\n\n\n\nOct 7, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\ndiary\n\n\n\n\n\n\n\n\n\nOct 6, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nHow to make a quarto blog\n\n\n\ntutorial\n\n\n\n\n\n\n\n\n\nOct 6, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/Day1/Day1.html",

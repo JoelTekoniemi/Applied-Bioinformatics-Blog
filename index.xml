@@ -10,7 +10,47 @@
 <atom:link href="https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Joels blog for Applied Bioinformatics</description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Wed, 08 Oct 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 09 Oct 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Day 4</title>
+  <dc:creator>Joel Tekoniemi</dc:creator>
+  <link>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day4/Day4.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="nextflow" class="level1">
+<h1>Nextflow</h1>
+<section id="pipeline-setup" class="level2">
+<h2 class="anchored" data-anchor-id="pipeline-setup">Pipeline setup</h2>
+<p>It is pretty easy to setup nextflow pipelines with the help of nf-core, but there is nonetheless some configuration that is needed: - Create Pixi environment - add channels conda-forge and bioconda <code>-c conda-forge -c bioconda</code> - add packages nextflow and nf-core - Create data folder and other necessary folder for pipeline E.g. genome, results, Symbolic link <code>nl</code> for data to avoid copying - Navigate to the nf-core pipeline and use the installer</p>
+<p>Example</p>
+<p>pixi run nextflow run nf-core/rnaseq -r 3.19.0 -resume -params-file nf-params.json -c hpc2n.config</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="rna-seq-pipeline.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="rna-seq-pipeline"><img src="https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day4/rna-seq-pipeline.png" class="img-fluid figure-img" alt="rna-seq-pipeline"></a></p>
+<figcaption>rna-seq-pipeline</figcaption>
+</figure>
+</div>
+</section>
+<section id="fancy-stuff" class="level2">
+<h2 class="anchored" data-anchor-id="fancy-stuff">Fancy stuff</h2>
+<ul>
+<li>tags: tags are shown next to processes when running pipeline</li>
+<li>workflow.onComplete: more info and user-friendly messages upon completed workflow</li>
+</ul>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>diary</category>
+  <guid>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day4/Day4.html</guid>
+  <pubDate>Thu, 09 Oct 2025 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Day 3</title>
   <dc:creator>Joel Tekoniemi</dc:creator>
