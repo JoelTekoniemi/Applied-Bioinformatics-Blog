@@ -10,7 +10,109 @@
 <atom:link href="https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Joels blog for Applied Bioinformatics</description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Thu, 09 Oct 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 11 Oct 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>MedBioInfo 2025</title>
+  <dc:creator>Joel Tekoniemi</dc:creator>
+  <link>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/MedBioInfo/MedBioInfo2025.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="class-of-2025" class="level1">
+<h1>Class of 2025!</h1>
+<p>After receiving our pink unicorn T-shirts&amp;#8482, we took our group picture and had lunch together! <img src="https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/MedBioInfo/pink-unicorns.png" class="img-fluid" alt="Pink unicorn gang"></p>
+</section>
+<section id="course-dinner" class="level1">
+<h1>Course Dinner</h1>
+<p>On Wednesday, we all (except some deserters) met at Tzatsiki for a greek dinner in the Mediterranean town of Uppsaliki! <img src="https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/MedBioInfo/.png" class="img-fluid"></p>
+
+
+</section>
+
+ ]]></description>
+  <category>people</category>
+  <guid>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/MedBioInfo/MedBioInfo2025.html</guid>
+  <pubDate>Sat, 11 Oct 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/MedBioInfo/ggplot2-graph-syntax.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>Day 5</title>
+  <dc:creator>Joel Tekoniemi</dc:creator>
+  <link>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day5/Day5.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="visualise-your-data-with-ggplot2" class="level1">
+<h1>Visualise your data with ggplot2</h1>
+<p>By Abu Bakar Siddique, adapted from RaukR workshop at NBIS</p>
+<section id="graphs-to-show-data" class="level2">
+<h2 class="anchored" data-anchor-id="graphs-to-show-data">Graphs to show data</h2>
+<p>Base R or ggplot2</p>
+<section id="ggplot2" class="level3">
+<h3 class="anchored" data-anchor-id="ggplot2">ggplot2</h3>
+<p>•&nbsp;Consistent coding •&nbsp;Flexible •&nbsp;More complicated syntax for simple plots, easier for complex plots •&nbsp;Saved to object</p>
+</section>
+</section>
+<section id="grammar-of-graphics" class="level2">
+<h2 class="anchored" data-anchor-id="grammar-of-graphics">Grammar of Graphics</h2>
+<p>Leland Wilkinson’s The Grammar of Graphics —&gt; Hadley Wickham ggplot2 in 2005 <img src="https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day5/ggplot2-graph-syntax.png" class="img-fluid"></p>
+<section id="plotting-using-functions" class="level3">
+<h3 class="anchored" data-anchor-id="plotting-using-functions">Plotting using functions:</h3>
+<p>•&nbsp;Data: input data always in data.frame format —&gt; str() to get structure of data •&nbsp;Aesthetic: mapping or visual characteristics of the geometry •&nbsp;Geometries: geometry representing data - points, lines, … •&nbsp;Facets: split plot into subplot •&nbsp;Statistics: statistical transformation- counts, means, … •&nbsp;Coordinates: numeric system to determine position of geometry - cartesian, polar, … •&nbsp;Scale: how visual characteristics are converted to display values •&nbsp;Theme: citrons points of display - font size, background colour, …</p>
+</section>
+<section id="data-formats" class="level3">
+<h3 class="anchored" data-anchor-id="data-formats">Data formats</h3>
+<p>Wide data: every variable as separate column. Long data: all numeric variables are in one column, also called tidy data. —&gt; column names into one column: variable —&gt; values into values column</p>
+</section>
+<section id="plotting-stats" class="level3">
+<h3 class="anchored" data-anchor-id="plotting-stats">Plotting stats</h3>
+<p>Stats can be plotted using “geom” argument in stat function call. All stats have default geometries.</p>
+</section>
+<section id="aesthetics" class="level3">
+<h3 class="anchored" data-anchor-id="aesthetics">Aesthetics</h3>
+<p>Mapping: aesthetics mapped to variable Parameter: defined, set values</p>
+</section>
+<section id="scales" class="level3">
+<h3 class="anchored" data-anchor-id="scales">Scales</h3>
+<p>Control positions, colour, fill, size, shape, alpha, linetype Syntax: scale_<aesthetic><em><type> Manual: scale</type></em><aes><em>manual Continuous: scale</em> press TAB —&gt; gradient, … Axes: scale_<axis>_<type></type></axis></aes></aesthetic></p>
+</section>
+<section id="facets" class="level3">
+<h3 class="anchored" data-anchor-id="facets">Facets</h3>
+<p>Split to subplot based on variable(s) Faceting in one dimension: facet_wrap(~variable) Two dimensions: facet_grid(variable_1 ~ variable_2) / facet_grid(var_1 + var_2)</p>
+</section>
+<section id="coordinate-systems" class="level3">
+<h3 class="anchored" data-anchor-id="coordinate-systems">Coordinate systems</h3>
+<p>Ex: Cartesian, map, polar</p>
+</section>
+<section id="theming" class="level3">
+<h3 class="anchored" data-anchor-id="theming">Theming</h3>
+<p>Modify non-data plot elements/appearance •&nbsp;Save an appearance for later reuse •&nbsp;?theme —&gt; theme_grey(), theme_bw() •&nbsp;Theme legend: control legend position theme(legend.<arg>) •&nbsp;Titles: labs() •&nbsp;Theme text: theme(axis.title = element_text(colour = …, size = …))</arg></p>
+</section>
+</section>
+<section id="other-things-about-ggplot2" class="level2">
+<h2 class="anchored" data-anchor-id="other-things-about-ggplot2">Other things about ggplot2</h2>
+<p>•&nbsp;Theme rect: element_rect() •&nbsp;Theme reuse newtheme = theme_bw() + theme(…) p + new theme •&nbsp;Saving plots Function ggsave() •&nbsp;Combining plots Patchwork package patchwork::wrap_plots(p, q) + plot_annotation(tag_levels = “a”)</p>
+</section>
+<section id="other-things-about-r" class="level2">
+<h2 class="anchored" data-anchor-id="other-things-about-r">Other things about R</h2>
+<p>sessionInfo() Lists dependencies, versions and useful information when publishing data.</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>diary</category>
+  <guid>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day5/Day5.html</guid>
+  <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day5/ggplot2-graph-syntax.png" medium="image" type="image/png" height="59" width="144"/>
+</item>
 <item>
   <title>Day 4</title>
   <dc:creator>Joel Tekoniemi</dc:creator>
@@ -26,12 +128,12 @@
 <section id="pipeline-setup" class="level2">
 <h2 class="anchored" data-anchor-id="pipeline-setup">Pipeline setup</h2>
 <p>It is pretty easy to setup nextflow pipelines with the help of nf-core, but there is nonetheless some configuration that is needed: - Create Pixi environment - add channels conda-forge and bioconda <code>-c conda-forge -c bioconda</code> - add packages nextflow and nf-core - Create data folder and other necessary folder for pipeline E.g. genome, results, Symbolic link <code>nl</code> for data to avoid copying - Navigate to the nf-core pipeline and use the installer</p>
-<p>Example</p>
+<p>Example using the rna-seq pipeline</p>
 <p>pixi run nextflow run nf-core/rnaseq -r 3.19.0 -resume -params-file nf-params.json -c hpc2n.config</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="rna-seq-pipeline.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="rna-seq-pipeline"><img src="https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day4/rna-seq-pipeline.png" class="img-fluid figure-img" alt="rna-seq-pipeline"></a></p>
-<figcaption>rna-seq-pipeline</figcaption>
+<p><a href="rna-seq-pipeline.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Image: rna-seq-pipeline"><img src="https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day4/rna-seq-pipeline.png" class="img-fluid figure-img" alt="Image: rna-seq-pipeline"></a></p>
+<figcaption>Image: rna-seq-pipeline</figcaption>
 </figure>
 </div>
 </section>
@@ -50,6 +152,7 @@
   <category>diary</category>
   <guid>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day4/Day4.html</guid>
   <pubDate>Thu, 09 Oct 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day4/thumbnail-nf-core.png" medium="image" type="image/png" height="55" width="144"/>
 </item>
 <item>
   <title>Day 3</title>
@@ -112,6 +215,7 @@
   <category>diary</category>
   <guid>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day3/Day3.html</guid>
   <pubDate>Wed, 08 Oct 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day3/nextflow.png" medium="image" type="image/png" height="46" width="144"/>
 </item>
 <item>
   <title>Day 2</title>
@@ -204,26 +308,6 @@
  ]]></description>
   <category>diary</category>
   <guid>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day1/Day1.html</guid>
-  <pubDate>Mon, 06 Oct 2025 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>How to make a quarto blog</title>
-  <dc:creator>Joel Tekoniemi</dc:creator>
-  <link>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/welcome/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>This is my first post in my Quarto blog. Welcome!</p>
-<p><img src="https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/welcome/thumbnail.jpg" class="img-fluid"> There is no content in this post.</p>
-
-
-
- ]]></description>
-  <category>tutorial</category>
-  <guid>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/welcome/</guid>
   <pubDate>Mon, 06 Oct 2025 00:00:00 GMT</pubDate>
 </item>
 </channel>

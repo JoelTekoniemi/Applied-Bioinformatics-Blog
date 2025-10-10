@@ -8,6 +8,7 @@
 
 <meta name="author" content="Joel Tekoniemi">
 <meta name="dcterms.date" content="2025-10-09">
+<meta name="description" content="Setting up a Nextflow rna-seq pipeline from nf-core">
 
 <title>Day 4 – JT_Blog</title>
 <style>
@@ -118,7 +119,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Day 4</h1>
-                                <div class="quarto-categories">
+                  <div>
+        <div class="description">
+          Setting up a Nextflow rna-seq pipeline from nf-core
+        </div>
+      </div>
+                          <div class="quarto-categories">
                 <div class="quarto-category">diary</div>
               </div>
                   </div>
@@ -161,12 +167,12 @@ ul.task-list li input[type="checkbox"] {
 <section id="pipeline-setup" class="level2">
 <h2 class="anchored" data-anchor-id="pipeline-setup">Pipeline setup</h2>
 <p>It is pretty easy to setup nextflow pipelines with the help of nf-core, but there is nonetheless some configuration that is needed: - Create Pixi environment - add channels conda-forge and bioconda <code>-c conda-forge -c bioconda</code> - add packages nextflow and nf-core - Create data folder and other necessary folder for pipeline E.g. genome, results, Symbolic link <code>nl</code> for data to avoid copying - Navigate to the nf-core pipeline and use the installer</p>
-<p>Example</p>
+<p>Example using the rna-seq pipeline</p>
 <p>pixi run nextflow run nf-core/rnaseq -r 3.19.0 -resume -params-file nf-params.json -c hpc2n.config</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="rna-seq-pipeline.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="rna-seq-pipeline"><img src="rna-seq-pipeline.png" class="img-fluid figure-img" alt="rna-seq-pipeline"></a></p>
-<figcaption>rna-seq-pipeline</figcaption>
+<p><a href="rna-seq-pipeline.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Image: rna-seq-pipeline"><img src="rna-seq-pipeline.png" class="img-fluid figure-img" alt="Image: rna-seq-pipeline"></a></p>
+<figcaption>Image: rna-seq-pipeline</figcaption>
 </figure>
 </div>
 </section>

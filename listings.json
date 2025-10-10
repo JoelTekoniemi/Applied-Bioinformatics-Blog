@@ -2,11 +2,12 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/MedBioInfo/MedBioInfo2025.html",
+      "/posts/Day5/Day5.html",
       "/posts/Day4/Day4.html",
       "/posts/Day3/Day3.html",
       "/posts/Day2/Day2.html",
-      "/posts/Day1/Day1.html",
-      "/posts/welcome/index.html"
+      "/posts/Day1/Day1.html"
     ]
   }
 ]
