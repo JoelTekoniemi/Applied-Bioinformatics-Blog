@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/about.html</loc>
-    <lastmod>2025-10-06T13:00:31.511Z</lastmod>
+    <lastmod>2025-10-10T12:04:47.843Z</lastmod>
   </url>
   <url>
     <loc>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day1/index.html</loc>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/index.html</loc>
-    <lastmod>2025-10-06T13:00:31.511Z</lastmod>
+    <lastmod>2025-10-10T12:33:40.866Z</lastmod>
   </url>
   <url>
     <loc>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day2/index.html</loc>
@@ -22,18 +22,26 @@
   </url>
   <url>
     <loc>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day4/Day4.html</loc>
-    <lastmod>2025-10-09T22:03:07.103Z</lastmod>
+    <lastmod>2025-10-10T12:09:48.217Z</lastmod>
   </url>
   <url>
     <loc>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day2/Day2.html</loc>
-    <lastmod>2025-10-07T15:32:36.606Z</lastmod>
+    <lastmod>2025-10-10T12:02:55.305Z</lastmod>
   </url>
   <url>
     <loc>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day3/Day3.html</loc>
-    <lastmod>2025-10-08T14:51:34.010Z</lastmod>
+    <lastmod>2025-10-10T12:02:05.246Z</lastmod>
   </url>
   <url>
     <loc>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day1/Day1.html</loc>
-    <lastmod>2025-10-06T13:18:22.051Z</lastmod>
+    <lastmod>2025-10-10T12:03:35.638Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/Day5/Day5.html</loc>
+    <lastmod>2025-10-10T12:00:37.539Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joeltekoniemi.github.io/Applied-Bioinformatics-Blog/posts/MedBioInfo/MedBioInfo2025.html</loc>
+    <lastmod>2025-10-10T12:33:15.830Z</lastmod>
   </url>
 </urlset>

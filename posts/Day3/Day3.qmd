@@ -3,6 +3,8 @@ title: "Day 3"
 author: "Joel Tekoniemi"
 date: "2025-10-08"
 categories: [diary]
+image: "nextflow.png"
+description: "Introduction to workflows and workflow managers"
 lightbox: true
 ---
 

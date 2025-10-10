@@ -3,6 +3,8 @@ title: "Day 4"
 author: "Joel Tekoniemi"
 date: "2025-10-09"
 categories: [diary]
+image: "thumbnail-nf-core.png"
+description: "Setting up a Nextflow rna-seq pipeline from nf-core"
 lightbox: true
 ---
 
@@ -18,12 +20,11 @@ It is pretty easy to setup nextflow pipelines with the help of nf-core, but ther
 	Symbolic link `nl` for data to avoid copying
 - Navigate to the nf-core pipeline and use the installer
 
-
-Example 
+Example using the rna-seq pipeline
 
 pixi run nextflow run nf-core/rnaseq -r 3.19.0 -resume -params-file nf-params.json -c hpc2n.config
 
-![rna-seq-pipeline](rna-seq-pipeline.png)
+![Image: rna-seq-pipeline](rna-seq-pipeline.png)
 
 ## Fancy stuff
 - tags: tags are shown next to processes when running pipeline

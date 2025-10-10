@@ -1,7 +1,8 @@
 ---
-title: "JT_Blog"
+title: "Applied Bioinformatics Blog"
 listing:
   contents: posts
+  fields: [image, date, title, description, categories, author]
   feed: true
   sort: "date desc"
   type: default
@@ -13,5 +14,3 @@ title-block-banner: true
 lightbox: true
 theme: lux
 ---
-
-

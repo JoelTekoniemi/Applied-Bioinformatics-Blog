@@ -3,6 +3,7 @@ title: "Day 2"
 author: "Joel Tekoniemi"
 date: "2025-10-07"
 categories: [diary]
+description: "Job scheduling and container setup on remote cluster"
 lightbox: true
 ---
 

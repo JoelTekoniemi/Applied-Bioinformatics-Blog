@@ -6,11 +6,13 @@ about:
   links:
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com/
+      href: https://www.linkedin.com/in/joeltekoniemi
     - icon: github
       text: Github
       href: https://github.com/JoelTekoniemi
-
+    - icon: building
+      text: KI Profile
+      href: https://ki.se/personer/joel-tekoniemi
 ---
 
-This blog was created for the Applied Bioinformatics course, where I post everyday updates :))
+This blog was created for the Applied Bioinformatics course in 2025, where I posted everyday updates during week 41:))

@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "This blog was created for the Applied Bioinformatics course, where I post everyday updates :))"
+    "text": "This blog was created for the Applied Bioinformatics course in 2025, where I posted everyday updates during week 41:))"
   },
   {
     "objectID": "posts/Day1/index.html",
@@ -37,9 +37,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "JT_Blog",
+    "title": "Applied Bioinformatics Blog",
     "section": "",
-    "text": "Day 4\n\n\n\ndiary\n\n\n\n\n\n\n\n\n\nOct 9, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nDay 3\n\n\n\ndiary\n\n\n\n\n\n\n\n\n\nOct 8, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nDay 2\n\n\n\ndiary\n\n\n\n\n\n\n\n\n\nOct 7, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nHow to make a quarto blog\n\n\n\ntutorial\n\n\n\n\n\n\n\n\n\nOct 6, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\ndiary\n\n\n\n\n\n\n\n\n\nOct 6, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\nNo matching items"
+    "text": "MedBioInfo 2025\n\n\n\npeople\n\n\n\nThe group\n\n\n\n\n\nOct 11, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nDay 5\n\n\n\ndiary\n\n\n\nVisualise your data with ggplot2\n\n\n\n\n\nOct 10, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nDay 4\n\n\n\ndiary\n\n\n\nSetting up a Nextflow rna-seq pipeline from nf-core\n\n\n\n\n\nOct 9, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nDay 3\n\n\n\ndiary\n\n\n\nIntroduction to workflows and workflow managers\n\n\n\n\n\nOct 8, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nDay 2\n\n\n\ndiary\n\n\n\nJob scheduling and container setup on remote cluster\n\n\n\n\n\nOct 7, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1\n\n\n\ndiary\n\n\n\nIntro to course and best practices for reproducible code\n\n\n\n\n\nOct 6, 2025\n\n\nJoel Tekoniemi\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/Day2/index.html",
@@ -74,14 +74,14 @@
     "href": "posts/Day4/Day4.html",
     "title": "Day 4",
     "section": "",
-    "text": "It is pretty easy to setup nextflow pipelines with the help of nf-core, but there is nonetheless some configuration that is needed: - Create Pixi environment - add channels conda-forge and bioconda -c conda-forge -c bioconda - add packages nextflow and nf-core - Create data folder and other necessary folder for pipeline E.g. genome, results, Symbolic link nl for data to avoid copying - Navigate to the nf-core pipeline and use the installer\nExample pixi run nextflow run nf-core/rnaseq -r 3.19.0 -resume -params-file nf-params.json -c hpc2n.config\n\n\n\nrna-seq-pipeline\n\n\n\n\n\n\ntags: tags are shown next to processes when running pipeline\nworkflow.onComplete: more info and user-friendly messages upon completed workflow"
+    "text": "It is pretty easy to setup nextflow pipelines with the help of nf-core, but there is nonetheless some configuration that is needed: - Create Pixi environment - add channels conda-forge and bioconda -c conda-forge -c bioconda - add packages nextflow and nf-core - Create data folder and other necessary folder for pipeline E.g. genome, results, Symbolic link nl for data to avoid copying - Navigate to the nf-core pipeline and use the installer\nExample using the rna-seq pipeline\npixi run nextflow run nf-core/rnaseq -r 3.19.0 -resume -params-file nf-params.json -c hpc2n.config\n\n\n\nImage: rna-seq-pipeline\n\n\n\n\n\n\ntags: tags are shown next to processes when running pipeline\nworkflow.onComplete: more info and user-friendly messages upon completed workflow"
   },
   {
     "objectID": "posts/Day4/Day4.html#pipeline-setup",
     "href": "posts/Day4/Day4.html#pipeline-setup",
     "title": "Day 4",
     "section": "",
-    "text": "It is pretty easy to setup nextflow pipelines with the help of nf-core, but there is nonetheless some configuration that is needed: - Create Pixi environment - add channels conda-forge and bioconda -c conda-forge -c bioconda - add packages nextflow and nf-core - Create data folder and other necessary folder for pipeline E.g. genome, results, Symbolic link nl for data to avoid copying - Navigate to the nf-core pipeline and use the installer\nExample pixi run nextflow run nf-core/rnaseq -r 3.19.0 -resume -params-file nf-params.json -c hpc2n.config\n\n\n\nrna-seq-pipeline"
+    "text": "It is pretty easy to setup nextflow pipelines with the help of nf-core, but there is nonetheless some configuration that is needed: - Create Pixi environment - add channels conda-forge and bioconda -c conda-forge -c bioconda - add packages nextflow and nf-core - Create data folder and other necessary folder for pipeline E.g. genome, results, Symbolic link nl for data to avoid copying - Navigate to the nf-core pipeline and use the installer\nExample using the rna-seq pipeline\npixi run nextflow run nf-core/rnaseq -r 3.19.0 -resume -params-file nf-params.json -c hpc2n.config\n\n\n\nImage: rna-seq-pipeline"
   },
   {
     "objectID": "posts/Day4/Day4.html#fancy-stuff",
@@ -180,5 +180,47 @@
     "title": "Day 1",
     "section": "",
     "text": "• git branch • git checkout • git merge • git diff • git add • git commit -m “Message” Commit on a single theme, message should be in imperative • git push\nNotes on branching • git branch —&gt; creates a new branch based on the current commit\nMerging • specific branch or specific commit • conflicts need to be resolved\nAdd and commit • add —&gt; taking area • commit —&gt; send to repo\nPush, pull and collaborate • git push origin main\nExercise: alphabetise a list • Format first name, last name • Branching • Merge with neighbours via commit, pull, merge and push until 14 names are in alphabetical order."
+  },
+  {
+    "objectID": "posts/Day5/Day5.html",
+    "href": "posts/Day5/Day5.html",
+    "title": "Day 5",
+    "section": "",
+    "text": "By Abu Bakar Siddique, adapted from RaukR workshop at NBIS\n\n\nBase R or ggplot2\n\n\n• Consistent coding • Flexible • More complicated syntax for simple plots, easier for complex plots • Saved to object\n\n\n\n\nLeland Wilkinson’s The Grammar of Graphics —&gt; Hadley Wickham ggplot2 in 2005 \n\n\n• Data: input data always in data.frame format —&gt; str() to get structure of data • Aesthetic: mapping or visual characteristics of the geometry • Geometries: geometry representing data - points, lines, … • Facets: split plot into subplot • Statistics: statistical transformation- counts, means, … • Coordinates: numeric system to determine position of geometry - cartesian, polar, … • Scale: how visual characteristics are converted to display values • Theme: citrons points of display - font size, background colour, …\n\n\n\nWide data: every variable as separate column. Long data: all numeric variables are in one column, also called tidy data. —&gt; column names into one column: variable —&gt; values into values column\n\n\n\nStats can be plotted using “geom” argument in stat function call. All stats have default geometries.\n\n\n\nMapping: aesthetics mapped to variable Parameter: defined, set values\n\n\n\nControl positions, colour, fill, size, shape, alpha, linetype Syntax: scale_ Manual: scalemanual Continuous: scale press TAB —&gt; gradient, … Axes: scale__\n\n\n\nSplit to subplot based on variable(s) Faceting in one dimension: facet_wrap(~variable) Two dimensions: facet_grid(variable_1 ~ variable_2) / facet_grid(var_1 + var_2)\n\n\n\nEx: Cartesian, map, polar\n\n\n\nModify non-data plot elements/appearance • Save an appearance for later reuse • ?theme —&gt; theme_grey(), theme_bw() • Theme legend: control legend position theme(legend.) • Titles: labs() • Theme text: theme(axis.title = element_text(colour = …, size = …))\n\n\n\n\n• Theme rect: element_rect() • Theme reuse newtheme = theme_bw() + theme(…) p + new theme • Saving plots Function ggsave() • Combining plots Patchwork package patchwork::wrap_plots(p, q) + plot_annotation(tag_levels = “a”)\n\n\n\nsessionInfo() Lists dependencies, versions and useful information when publishing data."
+  },
+  {
+    "objectID": "posts/Day5/Day5.html#graphs-to-show-data",
+    "href": "posts/Day5/Day5.html#graphs-to-show-data",
+    "title": "Day 5",
+    "section": "",
+    "text": "Base R or ggplot2\n\n\n• Consistent coding • Flexible • More complicated syntax for simple plots, easier for complex plots • Saved to object"
+  },
+  {
+    "objectID": "posts/Day5/Day5.html#grammar-of-graphics",
+    "href": "posts/Day5/Day5.html#grammar-of-graphics",
+    "title": "Day 5",
+    "section": "",
+    "text": "Leland Wilkinson’s The Grammar of Graphics —&gt; Hadley Wickham ggplot2 in 2005 \n\n\n• Data: input data always in data.frame format —&gt; str() to get structure of data • Aesthetic: mapping or visual characteristics of the geometry • Geometries: geometry representing data - points, lines, … • Facets: split plot into subplot • Statistics: statistical transformation- counts, means, … • Coordinates: numeric system to determine position of geometry - cartesian, polar, … • Scale: how visual characteristics are converted to display values • Theme: citrons points of display - font size, background colour, …\n\n\n\nWide data: every variable as separate column. Long data: all numeric variables are in one column, also called tidy data. —&gt; column names into one column: variable —&gt; values into values column\n\n\n\nStats can be plotted using “geom” argument in stat function call. All stats have default geometries.\n\n\n\nMapping: aesthetics mapped to variable Parameter: defined, set values\n\n\n\nControl positions, colour, fill, size, shape, alpha, linetype Syntax: scale_ Manual: scalemanual Continuous: scale press TAB —&gt; gradient, … Axes: scale__\n\n\n\nSplit to subplot based on variable(s) Faceting in one dimension: facet_wrap(~variable) Two dimensions: facet_grid(variable_1 ~ variable_2) / facet_grid(var_1 + var_2)\n\n\n\nEx: Cartesian, map, polar\n\n\n\nModify non-data plot elements/appearance • Save an appearance for later reuse • ?theme —&gt; theme_grey(), theme_bw() • Theme legend: control legend position theme(legend.) • Titles: labs() • Theme text: theme(axis.title = element_text(colour = …, size = …))"
+  },
+  {
+    "objectID": "posts/Day5/Day5.html#other-things-about-ggplot2",
+    "href": "posts/Day5/Day5.html#other-things-about-ggplot2",
+    "title": "Day 5",
+    "section": "",
+    "text": "• Theme rect: element_rect() • Theme reuse newtheme = theme_bw() + theme(…) p + new theme • Saving plots Function ggsave() • Combining plots Patchwork package patchwork::wrap_plots(p, q) + plot_annotation(tag_levels = “a”)"
+  },
+  {
+    "objectID": "posts/Day5/Day5.html#other-things-about-r",
+    "href": "posts/Day5/Day5.html#other-things-about-r",
+    "title": "Day 5",
+    "section": "",
+    "text": "sessionInfo() Lists dependencies, versions and useful information when publishing data."
+  },
+  {
+    "objectID": "posts/MedBioInfo/MedBioInfo2025.html",
+    "href": "posts/MedBioInfo/MedBioInfo2025.html",
+    "title": "MedBioInfo 2025",
+    "section": "",
+    "text": "Class of 2025!\nAfter receiving our pink unicorn T-shirts&#8482, we took our group picture and had lunch together! \n\n\nCourse Dinner\nOn Wednesday, we all (except some deserters) met at Tzatsiki for a greek dinner in the Mediterranean town of Uppsaliki!"
   }
 ]

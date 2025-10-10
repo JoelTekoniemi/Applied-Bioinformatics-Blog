@@ -1,0 +1,19 @@
+---
+title: "MedBioInfo 2025"
+author: "Joel Tekoniemi"
+image: "ggplot2-graph-syntax.png"
+date: "2025-10-11"
+description: "The group"
+categories: [people]
+lightbox: true
+---
+
+# Class of 2025!
+
+After receiving our pink unicorn T-shirts&#8482, we took our group picture and had lunch together!
+![Pink unicorn gang](pink-unicorns.png)
+
+# Course Dinner
+
+On Wednesday, we all (except some deserters) met at Tzatsiki for a greek dinner in the Mediterranean town of Uppsaliki!
+![]()
